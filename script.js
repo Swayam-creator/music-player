@@ -21,11 +21,11 @@ function PlayPause(){
 if(song.play()){
     setInterval(()=>{   
          progress.value=song.currentTime;
-    },700)
+    },500)
 }
 progress.onchange=function(){
     song.play();
     song.currentTime=progress.value;
     ctrlIcon.classList.add("fa-pause");
     ctrlIcon.classList.add("fa-play");
-}
+}    
